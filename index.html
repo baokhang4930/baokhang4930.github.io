@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
+<title>Bootstrap demo</title>
 <style>
 @font-face {
   font-family: "San Francisco";
@@ -11,15 +13,35 @@ body {
     background-color: black;
     color: white;
     font-family: "San Francisco", sans-serif;
+    text-align: center;
 }
 h1 {
   font-size: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 h2 {
   font-size: 40px;
+  padding-bottom: 10px;
+}
+h3 {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+p {
+  font-size: 25px;
+  padding-bottom: 10px;
 }
 .title {
   font-size: 75px;
+  padding: 50px 50px;
+}
+.para {
+  padding-top: 50px;
+  padding-right: 80px;
+  padding-bottom: 100px;
+  padding-left: 80px;
 }
 .gradient-text {
   background-image: linear-gradient(90deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
@@ -39,17 +61,203 @@ h2 {
   }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.footer {
+  position: relative;
+  width: 100%;
+  background: #161616;
+  min-height: 150px;
+  padding: 50px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.skill_container { 
+  background-color: rgb(73, 73, 73); 
+  width: 800px; 
+  border-radius: 15px; 
+  margin: auto;
+} 
+
+.skill { 
+  background-color: rgb(33, 141, 0); 
+  color: white; 
+  padding: 1%; 
+  text-align: right; 
+  font-size: 20px; 
+  border-radius: 15px; 
+} 
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+  
+  
 </style>
 </head>
 <body>
-<h2 style="text-align: center;">Hi 👋, welcome to my website!</h2>
-<h1 class="gradient-text title" style="text-align: center;">KKhangDev</h1>
-<h3 style="text-align: center;">- Software Developer, Minecraft Modder -</h3>
+<div class="para">
+<h2>Hi 👋, welcome to my website!</h2>
+<h1 class="gradient-text title">KKhangDev</h1>
+<h3>- Software Developer, Minecraft Modder -</h3>
+</div>
 
 <br>
 
-<h1 style="text-align: center;">Who is this?</h1>
+<div class="para">
+<h1>About me</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada aliquet arcu sed congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus non nunc nec urna lobortis varius. Aenean dapibus sed tellus nec consectetur. Nam quis odio imperdiet, vehicula quam sit amet, egestas leo. Fusce eget augue vitae velit eleifend tristique ac vitae dui. Etiam a ante eu est vulputate hendrerit. Pellentesque volutpat velit vel ipsum egestas tempor at at dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc ac leo quis massa semper rhoncus quis suscipit metus. Fusce hendrerit faucibus sem ut gravida.</p>
+</div>
+
+<div class="para">
+<h1>Experience</h1>
+
+<h3>Programming Languages</h3>
+<p>Python</p>
+<div class="skill_container"> 
+  <div class="skill" style="width: 90%;">90%</div> 
+</div>
+<br>
+<p>Java</p>
+<div class="skill_container"> 
+  <div class="skill" style="width: 80%;">80%</div> 
+</div> 
+<br>
+<p>C++</p>
+<div class="skill_container"> 
+  <div class="skill" style="width: 60%;">60%</div> 
+</div> 
+<br>
+<p>HTML5/CSS/JavaScript</p>
+<div class="skill_container"> 
+  <div class="skill" style="width: 50%;">50%</div> 
+</div> 
+
+<br>
+<h3>Platform Skill</h3>
+<p>Minecraft Development (Server Plugin, Client Mod)</p>
+<div class="skill_container"> 
+  <div class="skill" style="width: 90%;">90%</div> 
+</div>
+<br>
+<p>Website Development</p>
+<div class="skill_container"> 
+  <div class="skill" style="width: 70%;">70%</div> 
+</div> 
+<br>
+<p>Discord Bot Development (Python)</p>
+<div class="skill_container"> 
+  <div class="skill" style="width: 60%;">80%</div> 
+</div> 
+<br>
+<p>Discord Server Design</p>
+<div class="skill_container"> 
+  <div class="skill" style="width: 70%;">70%</div> 
+</div> 
+</div>
+
+<div class="para">
+<h1>Position</h1>
+<h3>Founder @ KKhang Development&trade;</h3>
+<p>KKhang Development is a trademark I put in my product as a brand.</p>
+<h3>Developer, Moderator @ Việt Bựa Fanclub</h3>
+<p>Việt Bựa Fanclub is a Discord server owned by 300k-subscriber YouTuber called <a href="https://www.youtube.com/@vietbuaofficial">vietbuaofficial</a></p>
+<h3>Developer, Moderator @ Nong's Ocean</h3>
+<p>Nong's Ocean is a Discord server owned by 1k-subscriber YouTuber called <a href="https://www.youtube.com/@0NONG">0NONG</a></p>
+</div>
+
+<div class="para">
+<h1>Projects</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada aliquet arcu sed congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus non nunc nec urna lobortis varius. Aenean dapibus sed tellus nec consectetur. Nam quis odio imperdiet, vehicula quam sit amet, egestas leo. Fusce eget augue vitae velit eleifend tristique ac vitae dui. Etiam a ante eu est vulputate hendrerit. Pellentesque volutpat velit vel ipsum egestas tempor at at dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc ac leo quis massa semper rhoncus quis suscipit metus. Fusce hendrerit faucibus sem ut gravida.</p>
+</div>
+
+<br>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> KKhang Development&trade;. All Rights Reserved</p>
+  <br>
+  <ul class="social-icon">
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-discord"></ion-icon>
+      </a></li>
+  </ul>
+</footer>
+
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
